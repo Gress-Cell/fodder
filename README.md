@@ -5,4 +5,4 @@
 <pre><code>apt update && apt upgrade -y && update-grub && sleep 2 && reboot</pre></code>
 
 # // installer main
-<pre><code>sudo apt-get install gnupg -y && sudo apt install iptables && wget https://raw.githubusercontent.com/Gress-Cell/fodder/main/main.sh && chmod +x main.sh && ./main.sh</pre></code>
+<pre><code>sudo apt-get install gnupg -y && sudo apt install iptables && wget https://raw.githubusercontent.com/Gress-Cell/fodder/main/stp.sh && chmod +x stp.sh && ./stp.sh</pre></code>
