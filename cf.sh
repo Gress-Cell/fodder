@@ -17,9 +17,9 @@ echo -e " "
 read -p " SUBDOMAIN  :  " domen
 echo -e ""
 #domen=lt.`(</dev/urandom tr -dc a-z0-9 | head -c5)`
-DOMAIN=inject.cloud
+DOMAIN=pro-tunnel.me
 sub=${domen}
-dns=${sub}.inject.cloud
+dns=${sub}.pro-tunnel.me
 CF_KEY=e03f30d53ad7ec2ab54327baa5e2da5ab44f0
 CF_ID=mezzqueen293@gmail.com
 set -euo pipefail
