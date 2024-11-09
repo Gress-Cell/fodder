@@ -123,8 +123,9 @@ clear
 ########################################################
 
 # LINK REPOSITORY
-REPO="https://raw.githubusercontent.com/lunatixmyscript/lunatixvpn/main/"
-CONFIG="https://raw.githubusercontent.com/lunatixmyscript/fodder/main/"
+REPO="https://raw.githubusercontent.com/shadowstsc/conf/shadow"
+CONFIG="https://raw.githubusercontent.com/shadowstsc/conf/shadow/"
+CONFIG="https://raw.githubusercontent.com/shadowstsc/conf/shadow/"
 ########################################################
 
 
@@ -243,6 +244,7 @@ fi
 
 # LINK REPOSITORY
 MENUREPO="https://raw.githubusercontent.com/Gress-Cell/v1/main/"
+LINK_JSON="https://raw.githubusercontent.com/shadowstsc/conf/shadow/JSON/"
 
 #############################################################
 
@@ -451,11 +453,11 @@ chown www-data.www-data $domainSock_dir
 latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $latest_version
 
-wget -O /etc/xray/vme.json "${CONFIG}vme.json" >/dev/null 2>&1
-wget -O /etc/xray/vle.json "${CONFIG}vle.json" >/dev/null 2>&1
-wget -O /etc/xray/tro.json "${CONFIG}tro.json" >/dev/null 2>&1
-wget -O /etc/xray/ssr.json "${CONFIG}ssr.json" >/dev/null 2>&1
-wget -O /etc/xray/config.json "${CONFIG}config.json" >/dev/null 2>&1
+wget -O /etc/xray/vme.json "${LINK_JSON}vme.json" >/dev/null 2>&1
+wget -O /etc/xray/vle.json "${LINK_JSON}vle.json" >/dev/null 2>&1
+wget -O /etc/xray/tro.json "${LINK_JSON}tro.json" >/dev/null 2>&1
+wget -O /etc/xray/ssr.json "${LINK_JSON}ssr.json" >/dev/null 2>&1
+wget -O /etc/xray/config.json "${LINK_JSON}config.json" >/dev/null 2>&1
 wget -O /etc/systemd/system/runn.service "${CONFIG}runn.service" >/dev/null 2>&1
 domain=$(cat /etc/xray/domain)
 IPVS=$(cat /etc/xray/ipvps)
